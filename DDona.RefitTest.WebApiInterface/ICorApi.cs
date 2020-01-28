@@ -11,5 +11,8 @@ namespace DDona.RefitTest.WebApiInterface
     {
         [Get("/api/cor")]
         Task<IEnumerable<Cor>> CarregarTodos();
+
+        [Get("/api/cor/buscar")]
+        Task<Cor> BuscarPorQueyString(Cor query);
     }
 }

@@ -20,6 +20,11 @@ namespace DDona.RefitTest.ConsoleApp
             {
                 Console.WriteLine(cor.ToString());
             }
+
+            Console.WriteLine();
+
+            Cor corQueryString = await corApi.BuscarPorQueyString(new Cor() { Id = 6, Nome = "Prateada"});
+            Console.WriteLine(corQueryString.ToString());
         }
     }
 }

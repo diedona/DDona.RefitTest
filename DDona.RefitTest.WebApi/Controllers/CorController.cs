@@ -32,5 +32,12 @@ namespace DDona.RefitTest.WebApi.Controllers
         {
             return Ok(_corRepository.CarregarPorId(id));
         }
+
+        [Route("buscar")]
+        [HttpGet]
+        public ActionResult<IEnumerable<Cor>> GetBuscar([FromQuery] Cor cor)
+        {
+            return Ok(cor);
+        }
     }
 }
